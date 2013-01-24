@@ -1,16 +1,14 @@
 <div>
-  <h2>Enter Mark Down</h2>
-  <textarea ng-model="markDownDocument"></textarea>
+  <textarea ng-model="markDownDocument" placeholder="Enter Mark Down here"></textarea>
 </div>
 
-<div>
-  <h2>Rendered HTML</h2>
+<a ng-click="toggleSource()">Show Source</a>
+<div ng-hide="showSource">
   <div ng-bind-html-unsafe="convertMarkDown(markDownDocument)"></div>
 </div>
 
-<div>
-  <h2>HTML Source</h2>
-  <textarea>{{convertMarkDown(markDownDocument)}}</textarea>
+<div ng-show="showSource">
+  <textarea placeholder="HTML Source ready to copy and paste">{{convertMarkDown(markDownDocument)}}</textarea>
 </div>
 
 
