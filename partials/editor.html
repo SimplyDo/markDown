@@ -1,0 +1,16 @@
+<div>
+  <h2>Enter Mark Down</h2>
+  <textarea ng-model="markDownDocument"></textarea>
+</div>
+
+<div>
+  <h2>Rendered HTML</h2>
+  <div ng-bind-html-unsafe="convertMarkDown(markDownDocument)"></div>
+</div>
+
+<div>
+  <h2>HTML Source</h2>
+  <textarea>{{convertMarkDown(markDownDocument)}}</textarea>
+</div>
+
+
