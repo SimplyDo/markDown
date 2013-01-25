@@ -1,8 +1,112 @@
 body {
-  background-color:#FFF;
+  background-color:#DDD;
   color:#000;
   font-family:sans-serif;
+  padding:0px;
+  margin:0px;
+}
+
+h1 {
+
 }
 
 img {
+}
+
+#top {
+  height:40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+
+#top #header {
+  float:left;
+  width:50%;
+}
+
+#header h1 {
+  font-size:1em;
+  padding:0px 0px 0px 0px;
+  line-height: 40px;
+  height:40px;
+  margin:0px;
+  font-weight: normal;
+}
+
+a {
+  color:#39D;
+}
+
+#header h1 a {
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  color:#666;
+  font-weight: bold;
+}
+
+#nav {
+  float:left;
+  display:block;
+  height:40px;
+  font-size: 0.9em;
+  color:#999;
+}
+
+#nav a {
+  padding: 0px 5px;
+}
+
+#nav a.active {
+  color:#000;
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#editor {
+  position:absolute;
+  left:0;
+  top:40px;
+  bottom:0px;
+  right:50%;
+  padding:0 5px 0 10px;
+  border-top: 1px solid #999;
+  background-color: #FFE;
+}
+
+textarea, div.rendered div, div.source div {
+  width:100%;
+  background-color: transparent;
+  border:0;
+  display: block;
+  outline:0;
+  padding:10px 0px;
+  resize:none;
+  overflow: auto;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.output {
+  position:absolute;
+  left:50%;
+  right:0px;
+  top:40px;
+  bottom:0px;
+  padding:0 5px 0 10px;
+  border-top: 1px solid #999;
+  border-left:1px dashed #999;
+  background-color: #EEE;
+}
+
+.output.source {
+  background-color: #DEF;
+}
+
+.output.source div {
+  white-space: pre;
+}
+
+.output.rendered {
+  background-color: #FFF;
 }

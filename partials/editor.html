@@ -1,14 +1,31 @@
-<div>
-  <textarea ng-model="markDownDocument" placeholder="Enter Mark Down here"></textarea>
+<div id="top">
+  <div id="header">
+    <h1>Markdown &rarr; HTML <a href="http://simplydo.com">by Simply Do</a></h1>
+  </div>
+  <div id="nav">
+    <a ng-click="toggleSource()" ng-show="showSource"><strong>Show Document</strong></a>
+    <a ng-click="toggleSource()" ng-hide="showSource"><strong>Show Source</strong></a> |
+    <a href="http://daringfireball.net/projects/markdown/" target="new">Markdown</a>
+    <a href="https://github.com/SimplyDo/markDown" target="new">Github</a>
+  </div>
 </div>
 
-<a ng-click="toggleSource()">Show Source</a>
-<div ng-hide="showSource">
-  <div ng-bind-html-unsafe="convertMarkDown(markDownDocument)"></div>
+
+
+<div id="editor">
+  <textarea ng-model="markDownDocument" id="editMarkDown" class="scale"></textarea>
 </div>
 
-<div ng-show="showSource">
-  <textarea placeholder="HTML Source ready to copy and paste">{{convertMarkDown(markDownDocument)}}</textarea>
+
+
+
+
+<div ng-hide="showSource" class="output rendered">
+  <div ng-bind-html-unsafe="convertMarkDown(markDownDocument)" class="scale"></div>
+</div>
+
+<div ng-show="showSource" class="output source">
+  <div class="scale">{{convertMarkDown(markDownDocument)}}</div>
 </div>
 
 

@@ -2,8 +2,7 @@ function editorController($scope) {
 
   var converter = new Showdown.converter();
 
-
-  $scope.title ="Hello World";
+  var windowHeight = $(window).height();
 
   $scope.markDownDocument = "";
 
@@ -20,6 +19,14 @@ function editorController($scope) {
   $scope.convertMarkDown = function(source) {
     return converter.makeHtml(source);
   }
+
+  $scope.resize = function() {
+    $('.scale').css("height", windowHeight-61);
+  }
+
+  $scope.resize();
+
+  $('#editMarkDown').focus();
 
 }
 
